@@ -2,75 +2,12 @@
 
 Simple app to demonstrate how to use Azure Functions with Python v2.
 
-![Miztiik Automation - Azure Functions - Python v2 Model](images/miztiik_architecture_azure_python_function_v2_001.png)
+![Miztiik Automation - LLM Bootcamp](images/miztiik_architecture_azure_python_function_v2_001.png)
 
-# Create the Resources.
-
-The bicep template will create the following resources: Azure Function App, API Management, Backend Service and the APIM Policy for configuring the backend. We have not configured the APIM to use the client certificate yet.
-
-```bash
-make all
-```
-
-## 🎯 Test the solution
-
-The API Url should be of the format `https://v2-store-front-us-apim-005.azure-api.net/api/miztiik_automation/store_events_producer`
-
-
-```bash
-LOAD_COUNT=250
-TARGET_HOST="https://v2-store-front-us-apim-005.azure-api.net/api/miztiik_automation/store_events_producer"
-for ((i=1; i<=LOAD_COUNT; i++)); do
-    COUNT=$((1 + ${RANDOM} % 10))
-    curl -s "${TARGET_HOST}?count=${COUNT}" &
-    echo -e "Request: (${i}/${LOAD_COUNT}) with event count:${COUNT} ----"
-    sleep 1 
-done
-```
-
-You should be able to see a similar output,
-
-```json
-{
-    "miztiik_event_processed": true,
-    "msg": "Generated 1 messages",
-    "event_count": 1,
-    "resp": {
-        "status": true,
-        "tot_msgs": 1,
-        "event_gen_duration": 20.317,
-        "bad_msgs": 0,
-        "sale_evnts": 1,
-        "inventory_evnts": 0,
-        "tot_sales": 1906.74,
-        "sample_event": {
-            "id": "5a6a4205-d0f8-4b12-bbc9-02039ac8824e",
-            "event_type": "sale_event",
-            "store_id": 2,
-            "store_fqdn": "localhost",
-            "store_ip": "127.0.0.1",
-            "cust_id": 860,
-            "category": "Printers",
-            "sku": 99849,
-            "price": 57.78,
-            "qty": 33,
-            "currency": "SGD",
-            "discount": 33,
-            "gift_wrap": true,
-            "variant": "black",
-            "priority_shipping": false,
-            "is_promoted": false,
-            "payment_method": "debit_card",
-            "ts": "2024-01-05T12:54:00.191857",
-            "contact_me": "github.com/miztiik",
-            "is_return": false
-        }
-    },
-    "last_processed_on": "2024-01-05T12:54:20.508823"
-}
-```
-
-You can also check CosmosDB for the new records and blob storage for the new files.
+## 📚 Chapters
+🎯
+- Hugging Face Transformers
+- Biases and Limitations in AI
 
  
 1. ## 🧹 CleanUp
@@ -90,7 +27,7 @@ You can also check CosmosDB for the new records and blob storage for the new fil
 
 ## 📌 Who is using this
 
-This repository aims to show how to Bicep to new developers, Solution Architects & Ops Engineers in Azure.
+This repository aims to get started with Large Language Models.
 
 ### 💡 Help/Suggestions or 🐛 Bugs
 
@@ -102,13 +39,12 @@ Thank you for your interest in contributing to our project. Whether it is a bug 
 
 ### 📚 References
 
-1. [Azure Docs - APIM Emit custom metrics policy][1]
-1. [Azure Docs - Monitor Custom Metric][2]
+1. [Hugging Face Hub][1]
 
 
 
-[1]: https://learn.microsoft.com/en-us/azure/api-management/emit-metric-policy
-[2]: https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-custom-overview
+[1]: https://huggingface.co/
+
 
 ### 🏷️ Metadata
 
