@@ -40,10 +40,12 @@ Thank you for your interest in contributing to our project. Whether it is a bug 
 ### 📚 References
 
 1. [Hugging Face Hub][1]
+1. [Streamlit App Gallery][2]
 
 
 
 [1]: https://huggingface.co/
+[2]: https://streamlit.io/gallery?category=llms&ref=blog.streamlit.io
 
 
 ### 🏷️ Metadata
