@@ -1,36 +1,36 @@
 # What is LangChain?
 
-LangChain is an open source orchestration framework for the development of applications using large language models (LLMs). LangChain's tools and APIs simplify the process of building LLM-driven applications like chatbots and virtual agents. 
+LangChain is an open source orchestration framework for the development of applications using large language models (LLMs). LangChain's tools and APIs simplify the process of building LLM-driven applications like chatbots and virtual agents.
 
-![LangChain Use Cases](./images/what_is_langchain.png)
+<img src="images/what_is_langchain.png" width=75%> 
 
-- **Models:** LangChain supports a variety of different models, so 
-you can choose the one that suits your needs best.
-  ![LangChain Use Cases](./images/models.png)
+- **Models IO:** LThe core element of any language model application is...the model. LangChain gives you the building blocks to interface with any language model.
 
-  - Language Models are used for generating text
-    - LLMs utilize APIs that take input text and 
-generate text outputs 
-    - ChatModels employ models that process 
-chat messages and produce responses.
-  - Text Embedding Models convert text into 
-numerical representations
-    - Text Classification Models categorize text
-    - Text Similarity Models compare text
-    - Text Generation Models create new text
-    - Text Summarization Models create summaries
-    - Text Translation Models convert text from one
 
-- **Prompts:** Prompts are the instructions that you give to the LLM. Prompts instruct the LLM to do what you want it to do, and how you want it to do it. Prompts can take the form of a _string_ (for Language Models) or a _list_ of messages (for Chat Models).
+  - **Models:** You can use LLMs or ChatModels within langchain library.
 
-  ![LangChain Use Cases](./images/prompts.png) 
-    
+    <img src="images/models.png" width=50%>
+
+  - **Prompts:** Prompts are the instructions that you give to the LLM. Prompts instruct the LLM to do what you want it to do, and how you want it to do it. Prompts can take the form of a _string_ (for Language Models) or a _list_ of messages (for Chat Models).
+  
+    <img src="images/prompts.png" width=50%>
+- **Retrieval:** Many LLM applications require user-specific data that is not part of the model's training set. The primary way of accomplishing this is through Retrieval Augmented Generation (RAG). In this process, external data is retrieved and then passed to the LLM when doing the generation step. LangChain provides all the building blocks for RAG applications - from simple to complex.
+
+    <img src="images/langchain_retrieval.jpg" width=75%>
+
+
+  - **Document Loaders**: LangChain's Document Loader modules are used to load and manage documents and data. They can be used to _load and manage documents_, _extract information from documents_, and _store and retrieve documents_.
+  - **Vector Stores**: A vector store takes care of storing embedded data and performing vector search for you.
+  - **Indexes**: LangChain's Index modules are used to store and manage data. They can be used to _store and retrieve data_, _manage data storage_, and _index and search data_.
+  
 - **Agents:** LangChain's Agent modules are designed to integrate with existing workflows and systems. They can be used to automate tasks, provide information, and interact with users. They handle things like _parsing input_, _generating output_ and determining the sequence of actions to follow and tools to use.
-  ![LangChain Use Cases](./images/agents.png)
-- **Chains**: LangChain's Chain modules are used to orchestrate the flow of data and actions between different models and agents. They can be used to _chain together multiple models_, _manage the flow of data_, and _handle the orchestration of tasks_.
-  ![LangChain Use Cases](./images/chains_02.png)
-- **Indexes**: LangChain's Index modules are used to store and manage data. They can be used to _store and retrieve data_, _manage data storage_, and _index and search data_.
-- **Document Loaders**: LangChain's Document Loader modules are used to load and manage documents and data. They can be used to _load and manage documents_, _extract information from documents_, and _store and retrieve documents_.
+
+    <img src="images/agents.png" width=50%>
+  
+  - **Chains**: LangChain's Chain modules are used to orchestrate the flow of data and actions between different models and agents. They can be used to _chain together multiple models_, _manage the flow of data_, and _handle the orchestration of tasks_.
+  
+    <img src="images/chains_02.png" width=50%>
+
 
 
 
