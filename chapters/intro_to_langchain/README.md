@@ -1,4 +1,4 @@
-# What is LangChain?
+# What is LangChain 🦜🔗?
 
 LangChain is an open source orchestration framework for the development of applications using large language models (LLMs). LangChain's tools and APIs simplify the process of building LLM-driven applications like chatbots and virtual agents.
 
